@@ -5,26 +5,7 @@
 
 # include "math_func.h"
 
-int main(){
-    unsigned long res = fact(19);
-    printf("%li\n",res);
-    unsigned long res_fibo = fibo(73);
-    printf("fibo %li\n",res_fibo);
-    unsigned long res_digit = digit_number(71345);
-    printf("digit %li\n",res_digit);
-    unsigned long res_bin_digit = binary_digit_number(7);
-    printf("digit %li\n",res_bin_digit);
-    unsigned long res_power2 = power_of_2(3);
-    printf("power of 2 %li\n",res_power2);
-    unsigned long res_sum0 = divisor_sum(6);
-    printf("div %li\n",res_sum0);
-    unsigned long res_sum1 = divisor_sum(30);
-    printf("div %li\n",res_sum1);
 
-
-
-    return 0;
-}
 
 unsigned long fact(unsigned long n) {
     unsigned long res = 1 ;
