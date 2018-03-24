@@ -3,6 +3,7 @@
 #include <err.h>
 #include "pixel_operations.h"
 #include "image_process.h"
+#include "to_matrice.h"
 
 
 
@@ -88,8 +89,14 @@ int main(int argc, char *argv[]){
 		}
 	}
 	display_image(img);
-	line_recovery(img);
-	seg_char(img);
-	display_image(img);
+	struct MatImg res;
+	res = ImgToMat(img);
+	Crop_Char(res);
+	SDL_Surface surf;
+	surf = MatToIm(res);
+	//PrintMat(res);
+	//line_recovery(img);
+	//seg_char(img);
+	display_image(&surf);
 	SDL_FreeSurface(img);
 }
